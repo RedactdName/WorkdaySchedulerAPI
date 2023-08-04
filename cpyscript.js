@@ -3,6 +3,15 @@
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 $(function () {
+  // TODO: Add code to display the current date in the header of the page.
+  //Displays current date
+  var today = dayjs().format('llll');
+  $(".currentDay").html(today);
+  
+  function workdayHours() {
+    var currentTime = dayjs().hour();
+
+    
   //save btn click listenser
   $(".saveBtn").on("click",function () {
     var value = $(this).siblings(".description").val();
@@ -10,15 +19,13 @@ $(function () {
     // saving to local storage
     localStorage.setItem(hourKey, value)
   } )
-  //
+  
   
   // TODO: Add code to apply the past, present, or future class to each time
   // block by comparing the id to the current hour. HINTS: How can the id
   // attribute of each time-block be used to conditionally add or remove the
   // past, present, and future classes? How can Day.js be used to get the
   // current hour in 24-hour time? dayjs/momentjs
-  function workdayHours() {
-    var currentTime = dayjs().hour();
     
     $(".time-block").each(function () {
       var timeBlock = parseInt($(this).attr("id").split("hour")[1]);
@@ -41,9 +48,6 @@ $(function () {
       }
     })
   }
-  // TODO: Add code to display the current date in the header of the page.
-  var today = dayjs().format('llll');
-  $(".currentDay").html(today);
   
   //
   // TODO: Add code to get any user input that was saved in localStorage and set
