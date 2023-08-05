@@ -6,7 +6,7 @@ $(function () {
   var currentTime = dayjs().hour();
   $("#currentDay").text(dayjs().format("dd, MMM D, YYYY hh:mm"))
   setInterval(function() {
-    $("#currentDay").text(dayjs().format("dd, MMM D, YYYY hh:mm"))
+    $("#currentDay").text(dayjs().format("ddd, MMM D, YYYY hh:mm"))
   },60000)
  
   $(".saveBtn").on("click",function () {
