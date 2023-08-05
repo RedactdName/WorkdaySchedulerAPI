@@ -9,7 +9,7 @@ A user can maintain an organized and functionally changing list of task for each
 Use URL to open website
 https://redactdname.github.io/WorkdaySchedulerAPI/
 
- 
+ ![Screenshot](./docs/images/screenshot.png)
 
 
 # How to use
