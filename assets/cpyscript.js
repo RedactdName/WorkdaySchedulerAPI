@@ -5,7 +5,7 @@ $(function () {
   $("#currentDay").text(dayjs().format("dd, MMM D, YYYY hh:mm"))
 // Refreshes the date/time display after 60sec
   setInterval(function() {
-    $("#currentDay").text(dayjs().format("ddd, MMM D, YYYY hh:mm"))
+    $("#currentDay").text(dayjs().format("dddd, MMM D, YYYY hh:mm"))
   },60000)
 // Enables save button for each hour/row 
   $(".saveBtn").on("click",function () {
